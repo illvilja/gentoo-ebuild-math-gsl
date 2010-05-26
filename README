@@ -1,0 +1,7 @@
+A Gentoo ebuild for the Math::GSL Perl module.
+
+Status:
+  Not yet submitted to the Gentoo maintainers (the 'perl-experimental'
+  overlay is a likely candidate).  However, build without any warnings
+  and with successfully running test scripts on an x86 Gentoo platform
+  with Perl 5.10.1 and GSL 1.13.

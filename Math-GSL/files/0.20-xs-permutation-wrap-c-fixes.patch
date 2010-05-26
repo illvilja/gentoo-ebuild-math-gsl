@@ -1,0 +1,38 @@
+--- xs/Permutation_wrap.c	2010-05-24 23:30:06.000000000 +0200
++++ xs/Permutation_wrap.c	2010-05-25 01:30:35.000000000 +0200
+@@ -1871,7 +1871,7 @@
+       SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "gsl_permute" "', argument " "4"" of type '" "size_t""'");
+     } 
+     arg4 = (size_t)(val4);
+-    result = (int)gsl_permute((int const *)arg1,arg2,arg3,arg4);
++    result = (int)gsl_permute((size_t const *)arg1,arg2,arg3,arg4);
+     ST(argvi) = SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(result)); argvi++ ;
+     {
+       if (arg1) free(arg1);
+@@ -1959,7 +1959,7 @@
+       SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "gsl_permute_inverse" "', argument " "4"" of type '" "size_t""'");
+     } 
+     arg4 = (size_t)(val4);
+-    result = (int)gsl_permute_inverse((int const *)arg1,arg2,arg3,arg4);
++    result = (int)gsl_permute_inverse((size_t const *)arg1,arg2,arg3,arg4);
+     ST(argvi) = SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(result)); argvi++ ;
+     {
+       if (arg1) free(arg1);
+@@ -2036,7 +2036,7 @@
+       SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "gsl_permute_int" "', argument " "4"" of type '" "size_t""'");
+     } 
+     arg4 = (size_t)(val4);
+-    result = (int)gsl_permute_int((int const *)arg1,arg2,arg3,arg4);
++    result = (int)gsl_permute_int((size_t const *)arg1,arg2,arg3,arg4);
+     ST(argvi) = SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(result)); argvi++ ;
+     {
+       if (arg1) free(arg1);
+@@ -2109,7 +2109,7 @@
+       SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "gsl_permute_int_inverse" "', argument " "4"" of type '" "size_t""'");
+     } 
+     arg4 = (size_t)(val4);
+-    result = (int)gsl_permute_int_inverse((int const *)arg1,arg2,arg3,arg4);
++    result = (int)gsl_permute_int_inverse((size_t const *)arg1,arg2,arg3,arg4);
+     ST(argvi) = SWIG_From_int  SWIG_PERL_CALL_ARGS_1((int)(result)); argvi++ ;
+     {
+       if (arg1) free(arg1);

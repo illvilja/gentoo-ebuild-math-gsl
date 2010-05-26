@@ -1,0 +1,11 @@
+--- Build.PL	2009-05-20 08:50:46.000000000 +0200
++++ Build.PL	2010-05-24 11:24:34.000000000 +0200
+@@ -204,7 +204,7 @@
+     dist_abstract       => 'Interface to the GNU Scientific Library using SWIG',
+     dist_author         => 'Jonathan Leto <jonathan@leto.net>',
+     dist_version_from   => 'lib/Math/GSL.pm',
+-    include_dirs	    => q{},
++    include_dirs	    => [],
+     extra_linker_flags  => '-shared ' . $ldflags,
+     extra_compiler_flags=> "$ccflags " . ($ENV{CC_FLAGS}||''),
+     swig_flags          => $swig_flags, 

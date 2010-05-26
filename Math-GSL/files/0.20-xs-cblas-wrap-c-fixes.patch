@@ -1,0 +1,31 @@
+--- xs/CBLAS_wrap.c	2010-05-25 12:33:39.000000000 +0200
++++ xs/CBLAS_wrap.c.patched	2010-05-25 13:16:04.000000000 +0200
+@@ -12510,15 +12510,18 @@
+     
+     {
+       if (arg8) free(arg8);
++      arg8 = (float *) 0;   /* Just being cautious */
+     }
+     
+     {
+       if (arg10) free(arg10);
++      arg10 = (float *) 0;
+     }
+     
+     
+     {
+-      if (arg13) free(arg13);
++      if (arg13 && arg13 != &temp13 ) free(arg13);
++      arg13 = (float *) 0;
+     }
+     
+     XSRETURN(argvi);
+@@ -12540,7 +12543,7 @@
+     
+     
+     {
+-      if (arg13) free(arg13);
++      if (arg13 && arg13 != &temp13) free(arg13);
+     }
+     
+     SWIG_croak_null();

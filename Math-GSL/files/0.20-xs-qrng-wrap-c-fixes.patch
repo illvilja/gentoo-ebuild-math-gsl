@@ -1,0 +1,18 @@
+--- xs/QRNG_wrap.c	2010-05-25 14:18:05.000000000 +0200
++++ xs/QRNG_wrap.c	2010-05-25 14:24:43.000000000 +0200
+@@ -2901,13 +2901,13 @@
+     }
+     
+     {
+-      if (arg2) free(arg2);
++      if (arg2 && arg2 != &temp2) free(arg2);
+     }
+     XSRETURN(argvi);
+   fail:
+     
+     {
+-      if (arg2) free(arg2);
++      if (arg2 && arg2 != &temp2) free(arg2);
+     }
+     SWIG_croak_null();
+   }

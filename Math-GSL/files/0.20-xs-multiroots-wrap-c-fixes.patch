@@ -1,0 +1,29 @@
+--- xs/Multiroots_wrap.c	2009-05-20 08:50:45.000000000 +0200
++++ xs/Multiroots_wrap.c	2010-05-24 23:27:50.000000000 +0200
+@@ -2272,7 +2272,7 @@
+     {
+       gsl_multiroot_function *f;
+       /* stub */
+-      arg1 = &f;
++      arg1 = f;
+     }
+     res2 = SWIG_ConvertPtr(ST(1), &argp2,SWIGTYPE_p_gsl_vector, 0 |  0 );
+     if (!SWIG_IsOK(res2)) {
+@@ -2835,7 +2835,7 @@
+     {
+       gsl_multiroot_function *f;
+       /* stub */
+-      arg2 = &f;
++      arg2 = f;
+     }
+     if (arg1) (arg1)->function = arg2;
+     
+@@ -3270,7 +3270,7 @@
+     {
+       gsl_multiroot_function *f;
+       /* stub */
+-      arg2 = &f;
++      arg2 = f;
+     }
+     res3 = SWIG_ConvertPtr(ST(2), &argp3,SWIGTYPE_p_gsl_vector, 0 |  0 );
+     if (!SWIG_IsOK(res3)) {

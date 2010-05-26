@@ -1,0 +1,28 @@
+--- xs/Roots_wrap.c	2010-05-25 01:33:05.000000000 +0200
++++ xs/Roots_wrap.c	2010-05-25 01:57:18.000000000 +0200
+@@ -3146,8 +3146,10 @@
+     }
+     arg1 = (gsl_root_fdfsolver *)(argp1);
+     {
+-      fprintf(stderr, 'FDF_FUNC');
+-      return (gsl_nan());
++      fprintf(stderr, "FDF_FUNC");
++      return
++          /* (gsl_nan())  Commented out as gcc complains, want return void */
++	  ;
+     }
+     if (arg1) (arg1)->fdf = arg2;
+     
+@@ -3709,8 +3711,10 @@
+     }
+     arg1 = (gsl_root_fdfsolver *)(argp1);
+     {
+-      fprintf(stderr, 'FDF_FUNC');
+-      return (gsl_nan());
++      fprintf(stderr, "FDF_FUNC");
++      return 
++          /* (gsl_nan()) Commented out, gcc complains, want return void*/
++	  ;
+     }
+     ecode3 = SWIG_AsVal_double SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+     if (!SWIG_IsOK(ecode3)) {
